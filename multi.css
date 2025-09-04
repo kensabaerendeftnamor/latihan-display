@@ -1,0 +1,47 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Container utama */
+.container {
+  width: 80%;
+  max-width: 800px;
+}
+
+.top-border,
+.bottom-border {
+  height: 15px;
+  background: black;
+}
+
+/* Header */
+.header {
+  height: 200px;
+  background: #8fbce3; 
+}
+
+.content {
+  display: flex;
+  min-height: 500px;
+}
+
+.sidebar {
+  flex: 1;
+  background: #e0e0e5; 
+}
+
+/* Konten tengah */
+.main {
+  flex: 2;
+  background: #fdf1cc;
+}
