@@ -1,32 +1,109 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tugas Multi Layout</title>
+  <title>Website</title>
   <link rel="stylesheet" href="tugasmulti.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">Kensa<span>B</span></div>
-    <ul class="menu">
-      <li><a href="#">Beranda</a></li>
-      <li><a href="#">Profil</a></li>
-      <li><a href="#">Kontak</a></li>
-    </ul>
-  </nav>
 
-  <section class="section-krem"></section>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">KENSA BAEREND</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#hobby">Hobby</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <section class="section-kotak">
-    <div class="box kuning"></div>
-    <div class="box coklat"></div>
-    <div class="box biru"></div>
-    <div class="box hijau"></div>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="mata.mp4" type="video/mp4">
+      Browser Anda tidak mendukung video.
+    </video>
+    <div class="hero-content">
+      <h1>Kensa Baerend</h1>
+      <p>
+        Saya Sarjana Teknik Informatika memiliki keterampilan dalam perancangan basis data, 
+        machine learning, dan pengembangan aplikasi Android. Telah mendapat berbagai sertifikasi 
+        nasional dan internasional di bidang pemodelan data hingga machine learning.
+      </p>
+      <div class="buttons">
+        <a href="#hobby" class="btn">Hobby</a>
+        <a href="#contact" class="btn">Kontak</a>
+      </div>
+    </div>
   </section>
 
-  <section class="section-biru"></section>
+  <!-- HOBBY SECTION -->
+  <section class="hobbys" id="hobby">
+    <h2>My Hobby</h2>
+    <div class="hobby-grid">
+      <div class="hobby-card">
+        <img src="mk.jpeg" alt="Musik">
+        <div class="card-content">
+          <h3>Musik</h3>
+          <p class="deskripsi">Mendengarkan musik memberi dorongan hidup untuk menghadapi hari.</p>
+        </div>
+      </div>
+      <div class="hobby-card">
+        <img src="gm.jpeg" alt="Game">
+        <div class="card-content">
+          <h3>Game</h3>
+          <p class="deskripsi">Bermain berbagai game dan membuat video gameplay untuk diunggah.</p>
+        </div>
+      </div>
+      <div class="hobby-card">
+        <img src="mv.jpeg" alt="Movie">
+        <div class="card-content">
+          <h3>Movie</h3>
+          <p class="deskripsi">Menonton film berbagai genre sebagai sarana belajar dan hiburan.</p>
+        </div>
+      </div>
+      <div class="hobby-card">
+        <img src="gbr.jpeg" alt="Menulis">
+        <div class="card-content">
+          <h3>Menulis</h3>
+          <p class="deskripsi">Menulis sebagai wadah mengekspresikan diri dan mengenal rasa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer class="footer"></footer>
+  <!-- CONTACT SECTION -->
+  <section class="contact" id="contact">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Hubungi Kensa</h2>
+        <p>Silakan tinggalkan pesan, saya akan segera membalas.</p>
+        <ul>
+          <li><strong>Alamat:</strong> Jl. Mawar No. 123, Bandung</li>
+          <li><strong>Email:</strong> info@mybrand.com</li>
+          <li><strong>Telepon:</strong> +62 812-3456-7890</li>
+        </ul>
+      </div>
+      <div class="contact-form">
+        <form action="#" method="post">
+          <input type="text" name="name" placeholder="Nama Anda" required>
+          <input type="email" name="email" placeholder="Email Anda" required>
+          <textarea name="message" rows="5" placeholder="Tulis pesan..." required></textarea>
+          <button type="submit" class="btn submit">Kirim Pesan</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      <p>Spesial Thanks for Bình Thanh, v, Vecktor Stock, and many more</p>
+    </marquee>
+  </footer>
+
 </body>
 </html>

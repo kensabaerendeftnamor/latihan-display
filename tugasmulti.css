@@ -1,4 +1,4 @@
-/* Reset */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -7,77 +7,309 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: #fff;
+  color: #333;
+  background: #f8f8f8;
 }
 
+/* NAVBAR */
 .navbar {
+  width: 100%;
+  padding: 20px 40px;
+  background: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #7c8ca5; 
-  padding: 10px 30px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.logo {
-  font-size: 20px;
+.navbar .logo {
+  font-size: 22px;
   font-weight: bold;
-  color: #fff;
-}
-.logo span {
-  color: #ffd700; 
+  color: #fc2f7e;
 }
 
-.menu {
+.navbar ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 20px;
 }
 
-.menu li a {
-  color: #fff;
+.navbar ul li a {
+  text-decoration: none;
+  color: #fc2f7e;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ffffff;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;       
+  justify-content: flex-end; 
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  width: 400px;     
+  height: 700px;    
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 70px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgb(255, 0, 170);
+  text-align: left;    
+  margin-left: 100px;   
+}
+
+.hero-content h1 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 
+    0 0 5px rgba(255, 0, 170, 0.8),
+    0 0 10px rgba(255, 0, 170, 0.7),
+    0 0 20px rgba(255, 0, 170, 0.6);
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-}
-.menu li a:hover {
-  text-decoration: underline;
-}
-
-.section {
-  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: 0.3s;
+  margin-top: 100px;
 }
 
-.section-krem {
-  background: #fdf1cc; 
-  height: 150px;
+.btn:hover {
+  background: white;
+  color: #ff009d;
 }
 
-.section-kotak {
+/* HOBBY SECTION */
+.hobbys {
+  text-align: center;
+  padding: 80px 40px;
+  background-image: url("bgb.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hobbys h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: #fff;
+  text-shadow: 
+    0 0 5px rgba(255, 0, 170, 0.8),
+    0 0 10px rgba(255, 0, 170, 0.7),
+    0 0 20px rgba(255, 0, 170, 0.6);
+}
+
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.hobby-card {
+  border-radius: 20px;
+  overflow: hidden;
   display: flex;
-  height: 150px;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.box {
+.hobby-card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(255, 0, 170, 0.5);
+}
+
+.hobby-card img {
+  width: 100%;
+  height: 368px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 10px;
+  text-shadow: 
+    0 0 5px rgba(255, 0, 170, 0.8),
+    0 0 10px rgba(255, 0, 170, 0.7),
+    0 0 20px rgba(255, 0, 170, 0.6);
+}
+
+.card-content .deskripsi {
+  font-size: 14px;
+  color: #ff009d;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* CONTACT SECTION */
+.contact {
+  padding: 80px 40px;
+  background-image: url("bgb2.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-info {
   flex: 1;
-}
-.kuning {
-  background: yellow;
-}
-.coklat {
-  background: goldenrod;
-}
-.biru {
-  background: steelblue;
-}
-.hijau {
-  background: seagreen;
+  min-width: 280px;
 }
 
-.section-biru {
-  background: #b3cbe6; /* biru muda */
-  height: 250px;
+.contact-info h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
 }
 
+.contact-info p {
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  margin-bottom: 10px;
+  color: #f1f1f1;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  backdrop-filter: blur(6px);
+  transition: border 0.3s, background 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #ff009d;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 0, 157, 0.6);
+}
+
+.btn.submit {
+  border-radius: 30px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+.btn.submit:hover {
+  background: white;
+  color: #ff009d;
+  box-shadow: 0 0 15px rgba(255, 0, 157, 0.6);
+}
+
+/* FOOTER */
 .footer {
-  background: #7c8ca5;
-  height: 15px;
+  background: rgb(0, 0, 0);
+  color: #fff;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer p {
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.footer marquee {
+  display: block;
+  width: 100%;
+  white-space: nowrap;
 }
